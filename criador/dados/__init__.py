@@ -1,0 +1,11 @@
+races = ['dwarf', 'elf', 'halfling', 'half_elf', 'human', 'dragonborn', ]
+classes = []
+
+dwarf = ['mountain dwarf', 'hill dwarf']
+elf = ['dark elf', 'high elf', 'wood elf']
+halfling = ['lghtfoot halfling','stout halfling']
+half_elf = ['half_elf']
+human = ['human']
+dragonborn = ['black', 'blue', 'brass', 'bronze', 'copeer', 'gold', 'green', 'red', 'silver']
+half_orc = ['half orc']
+tiefling = ['tiefling']
