@@ -25,9 +25,9 @@ def leiaint(msg):
             return n
 
 
-def menu(lista):
+def menu(lista,n):
     # cria um menu que le numeros inteiros
-    cabeçalho('Menu Pricipal')
+    cabeçalho(n)
     c = 1
     for item in lista:
         print(f'\033[33m{c}\033[m - \033[34m{item}\033[m')
