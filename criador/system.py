@@ -3,12 +3,14 @@ from criador.interface import menu
 from criador.dados import *
 from criador.funcoes import *
 
-race_choice_num = menu(races,'Races')
-race_choice = races[race_choice_num-1]
+# first-step = choosing race
+race_choice_num = menu(races, 'Races')
+race_choice = races[race_choice_num - 1]
 
+# second-step = choosing racial trace
+s_race_choice_num = menu(sub_div(race_choice,s_races), 'Race traces')
+s_race_choice = sub_div(race_choice,s_races)[s_race_choice_num - 1]
 
-s_race_choice_num = menu(sub_div(race_choice), 'Race traces')
-s_race_choice = sub_div(race_choice)[s_race_choice_num-1]
-
-character =player(race=race_choice, s_race=s_race_choice)
+# applying info to player() object
+character = player(race=race_choice, s_race=s_race_choice)
 character.all_atr()

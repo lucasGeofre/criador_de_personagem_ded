@@ -6,7 +6,7 @@ def lin(tam=42):
 def cabeçalho(txt):
     # criar algum titulo
     print(lin())
-    print(txt.center(42))
+    print(str(txt).center(42))
     print(lin())
 
 
@@ -25,7 +25,7 @@ def leiaint(msg):
             return n
 
 
-def menu(lista,n):
+def menu(lista,n='Menu'):
     # cria um menu que le numeros inteiros
     cabeçalho(n)
     c = 1
