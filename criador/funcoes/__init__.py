@@ -2,14 +2,17 @@ from criador.dados import s_races
 import random
 
 
-# this function will return the lists inside the dictionary
-
 def sub_div(n, l):
+    # this function will return the lists inside the dictionary
+    # n is the name of the dictionary
+    # l is the list of dictionaries
     for c in range(len(l)):
         r_title = str(l[c]).split(':')[0][2:-1]
         if r_title == n:
             m = l[c][n]
     return m
+
+
 
 def ability():
     abt = []

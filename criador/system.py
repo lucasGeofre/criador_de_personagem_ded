@@ -13,4 +13,5 @@ s_race_choice = sub_div(race_choice,s_races)[s_race_choice_num - 1]
 
 # applying info to player() object
 character = player(race=race_choice, s_race=s_race_choice)
-character.all_atr()
+character.choose_atr()
+character.list_atr()
