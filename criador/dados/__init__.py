@@ -1,4 +1,5 @@
 # Data for Races, Sub-races, Classes and Characteristics
+# Testing push/commit
 
 import random
 
@@ -80,16 +81,6 @@ initial_ability_values = [  # [ s_race, Strength, Intelligence, Constitution, Wi
 
 ## Dices
 
-## Race modifiers
-r_modifiers = [{'dwarf': ['mountain dwarf', 'hill dwarf']},
-               {'elf': ['dark elf', 'high elf', 'wood elf']},
-               {'halfling': ['lightfoot halfling', 'stout halfling']},
-               {'half_elf': ['half_elf']},
-               {'human': ['human']},
-               {'dragonborn': ['black', 'blue', 'brass', 'bronze', 'copper', 'gold', 'green', 'red', 'silver']},
-               {'tiefling': ['tiefling']},
-               {'gnome': ['rock gnome', 'forest gnome']},
-               {'half_orc': ['half_orc']}]
 
 ## Equipment
 weapons = []
