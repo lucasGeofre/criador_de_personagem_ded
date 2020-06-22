@@ -1,12 +1,14 @@
+# Interface
+
 def lin(tam=42):
     # escreve 42 linhas
     return '-' * tam
 
 
-def cabeçalho(txt):
+def title(txt):
     # criar algum titulo
     print(lin())
-    print(str(txt).center(42))
+    print(txt.center(42))
     print(lin())
 
 
@@ -25,9 +27,9 @@ def leiaint(msg):
             return n
 
 
-def menu(lista,n='Menu'):
-    # cria um menu que le numeros inteiros
-    cabeçalho(n)
+def menu(lista, txt):
+    # creates a menu that read integers
+    title(txt)
     c = 1
     for item in lista:
         print(f'\033[33m{c}\033[m - \033[34m{item}\033[m')
