@@ -76,6 +76,7 @@ initial_ability_values = [  # [ s_race, Strength, Intelligence, Constitution, Wi
                            ['forest gnome',        0,2,0,0,1,0],
                            ['half_orc',            2,0,1,0,0,0]]
 
+#class_path
 
 ## Spellbook
 
