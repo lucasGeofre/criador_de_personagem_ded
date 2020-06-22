@@ -1,6 +1,6 @@
 # Functions
 
-from criador.data import initial_ability_values, s_races
+from criador.dados import initial_ability_values, s_races
 import random
 
 ##
@@ -24,6 +24,8 @@ def random_ability_values():
         abl_list.append(value)
         abl_list.sort(reverse=True)
         abl_value = sum(abl_list[0:3])
+        if abl_value < 8:
+            abl_value = 8
     return abl_value
 
 
@@ -36,3 +38,5 @@ def initial_abl_list(name):
             list.append(initial_ability_values[c][1:7])
     return list
 
+for i in range(1,11):
+    print(random_ability_values())
