@@ -1,6 +1,6 @@
 # Functions
 
-from criador.dados import initial_ability_values, s_races
+from criador_de_personagem_ded.criador.dados import initial_ability_values, s_races
 import random
 
 ##
@@ -38,5 +38,3 @@ def initial_abl_list(name):
             list.append(initial_ability_values[c][1:7])
     return list
 
-for i in range(1,11):
-    print(random_ability_values())

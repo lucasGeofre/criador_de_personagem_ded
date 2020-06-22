@@ -1,8 +1,9 @@
 # Classes
 
-from criador.dados import *
-from criador.funcoes import *
-from criador.interface import *
+from criador_de_personagem_ded.criador.dados import *
+from criador_de_personagem_ded.criador.funcoes import *
+from criador_de_personagem_ded.criador.interface import *
+
 
 ## Defining class Player
 
@@ -35,7 +36,7 @@ class Player:
     ### Print Attributes
     def my_atr(self):
         print("\n", "-" * 42)
-        print(" Your attributes: \n")
+        print("Your attributes:\n")
         for c in range(len(self.list_prm)):
             p1 = str(self.list_prm[c]).split(':')[0][2:-1]
             p2 = str(self.list_prm[c]).split(':')[1][2:-2]
@@ -109,7 +110,11 @@ class Player:
         s_race_choice_num = menu(sub_div(self.race), 'Race traces')
         self.s_race = sub_div(self.race)[s_race_choice_num - 1]
 
-
+        ## Updating list of attributes
+        self.list_prm = [{"class": self.clss},
+                         {"race": self.race},
+                         {"sub_clss": self.clss_path},
+                         {"sub_race": self.s_race}]
 
     def choose_class(self):
 
@@ -117,12 +122,16 @@ class Player:
         clss_choice_num = menu(classes, 'Classes')
         self.clss = classes[clss_choice_num - 1]
 
+        ## Updating list of attributes
+        self.list_prm = [{"class": self.clss},
+                         {"race": self.race},
+                         {"sub_clss": self.clss_path},
+                         {"sub_race": self.s_race}]
 
     ### Print character sheet
 
-    def my_sheet(self):   # todo finish this function
+    def my_sheet(self):  # todo finish this function
         pass
-
 
 
 class Race:
@@ -136,6 +145,3 @@ class RacialTrace(Race):
         super(RacialTrace, self).__init__(race_name)
         self.rt_name = rt_name
         self.rt_modifier = rt_modifier
-
-
-
