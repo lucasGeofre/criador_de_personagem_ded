@@ -4,11 +4,13 @@
 import random
 
 ## Races
+from typing import Dict, List
+
 races = ['dwarf', 'elf', 'halfling', 'half_elf', 'human', 'dragonborn', 'half_orc', 'tiefling', 'gnome']
 
 
 ## Sub-races
-s_races = [{'dwarf': ['mountain dwarf', 'hill dwarf']},
+s_races: List[Dict[str, List[str]]] = [{'dwarf': ['mountain dwarf', 'hill dwarf']},
            {'elf': ['dark elf', 'high elf', 'wood elf']},
            {'halfling': ['lightfoot halfling', 'stout halfling']},
            {'half_elf': ['half_elf']},
@@ -17,6 +19,7 @@ s_races = [{'dwarf': ['mountain dwarf', 'hill dwarf']},
            {'tiefling': ['tiefling']},
            {'gnome': ['rock gnome', 'forest gnome']},
            {'half_orc': ['half_orc']}]
+
 
 
 ## Classes
