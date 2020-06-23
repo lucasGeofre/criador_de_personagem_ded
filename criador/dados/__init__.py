@@ -1,14 +1,12 @@
 # Data for Races, Sub-races, Classes and Characteristics
-# Testing push/commit
 
-import random
 
 ## Races
 races = ['dwarf', 'elf', 'halfling', 'half_elf', 'human', 'dragonborn', 'half_orc', 'tiefling', 'gnome']
 
 
 ## Sub-races
-s_races = [{'dwarf': ['mountain dwarf', 'hill dwarf']},
+s_races_ = [{'dwarf': ['mountain dwarf', 'hill dwarf']},
            {'elf': ['dark elf', 'high elf', 'wood elf']},
            {'halfling': ['lightfoot halfling', 'stout halfling']},
            {'half_elf': ['half_elf']},
@@ -17,6 +15,16 @@ s_races = [{'dwarf': ['mountain dwarf', 'hill dwarf']},
            {'tiefling': ['tiefling']},
            {'gnome': ['rock gnome', 'forest gnome']},
            {'half_orc': ['half_orc']}]
+
+s_races = {'dwarf': ['mountain dwarf', 'hill dwarf'],
+           'elf': ['dark elf', 'high elf', 'wood elf'],
+           'halfling': ['lightfoot halfling', 'stout halfling'],
+           'half_elf': ['half_elf'],
+           'human': ['human'],
+           'dragonborn': ['black', 'blue', 'brass', 'bronze', 'copper', 'gold', 'green', 'red', 'silver'],
+           'tiefling': ['tiefling'],
+           'gnome': ['rock gnome', 'forest gnome'],
+           'half_orc': ['half_orc']}
 
 
 ## Classes

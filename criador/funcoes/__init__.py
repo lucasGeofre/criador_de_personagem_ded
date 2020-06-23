@@ -3,16 +3,6 @@
 from criador_de_personagem_ded.criador.dados import initial_ability_values, s_races
 import random
 
-##
-def sub_div(n):
-    # this function will return the lists inside the dictionary
-    # n is the name of the dictionary
-    # l is the list of dictionaries
-    for c in range(len(s_races)):
-        r_title = str(s_races[c]).split(':')[0][2:-1]
-        if r_title == n:
-            m = s_races[c][n]
-    return m
 
 ## Random select of ability values for the player to choose
 
@@ -37,4 +27,10 @@ def initial_abl_list(name):
         if name == initial_ability_values[c][0]:
             list.append(initial_ability_values[c][1:7])
     return list
+
+
+## Select the menu item for you
+
+def random_choice():
+    pass
 

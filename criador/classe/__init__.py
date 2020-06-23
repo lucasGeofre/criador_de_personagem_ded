@@ -55,44 +55,49 @@ class Player:
     # Choose Abilities values with dies method
     def choose_abl(self):
 
+        # Pull initial ability values from the selected race
         if self.race != 'dragonborn':
             list = initial_abl_list(self.s_race)[0]
         else:
             list = initial_abl_list(self.race)[0]
+
+        # Create lists of ability values and the name of abilities
         values = []
-        n = abilities
+        abl = abilities
         for c in range(0, 6):
             values.append(random_ability_values())
 
+        # Selecting each value for abilities
         for i in range(0, 6):
             title(f'These are the values for your abilities: \n{values}')
 
-            choice = menu(n, f'where do you want to put the value: {values[5 - i]}')
-            if n[choice - 1] == 'Strength':
+            choice = menu_num(abl, f'where do you want to put the value: {values[5 - i]}')
+            if abl[choice - 1] == 'Strength':
                 self.strength += values[5 - i] + list[0]
                 values.pop(5 - i)
-                n.pop(choice - 1)
-            elif n[choice - 1] == 'Intelligence':
+                abl.pop(choice - 1)
+            elif abl[choice - 1] == 'Intelligence':
                 self.intelligence += values[5 - i] + list[1]
                 values.pop(5 - i)
-                n.pop(choice - 1)
-            elif n[choice - 1] == 'Constitution':
+                abl.pop(choice - 1)
+            elif abl[choice - 1] == 'Constitution':
                 self.constituition += values[5 - i] + list[2]
                 values.pop(5 - i)
-                n.pop(choice - 1)
-            elif n[choice - 1] == 'Wisdom':
+                abl.pop(choice - 1)
+            elif abl[choice - 1] == 'Wisdom':
                 self.wisdom += values[5 - i] + list[3]
                 values.pop(5 - i)
-                n.pop(choice - 1)
-            elif n[choice - 1] == 'Dexterity':
+                abl.pop(choice - 1)
+            elif abl[choice - 1] == 'Dexterity':
                 self.dexterity += values[5 - i] + list[4]
                 values.pop(5 - i)
-                n.pop(choice - 1)
+                abl.pop(choice - 1)
             else:
                 self.charisma += values[5 - i] + list[5]
                 values.pop(5 - i)
-                n.pop(choice - 1)
+                abl.pop(choice - 1)
 
+        # Update list of abilities
         self.list_abl = [{'Strength': self.strength},
                          {'Intelligence': self.intelligence},
                          {'Constitution': self.constituition},
@@ -103,12 +108,10 @@ class Player:
     def choose_race(self):
 
         ## Choosing Race
-        race_choice_num = menu(races, 'Races')
-        self.race = races[race_choice_num - 1]
+        self.race = menu_choice(races, 'Races')
 
         ## Choosing Sub-race
-        s_race_choice_num = menu(sub_div(self.race), 'Race traces')
-        self.s_race = sub_div(self.race)[s_race_choice_num - 1]
+        self.s_race = menu_choice(s_races.get(self.race), 'Race traces')
 
         ## Updating list of attributes
         self.list_prm = [{"class": self.clss},
@@ -119,7 +122,7 @@ class Player:
     def choose_class(self):
 
         ## Choosing Class
-        clss_choice_num = menu(classes, 'Classes')
+        clss_choice_num = menu_num(classes, 'Classes')
         self.clss = classes[clss_choice_num - 1]
 
         ## Updating list of attributes
