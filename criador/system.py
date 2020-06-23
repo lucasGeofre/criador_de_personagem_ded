@@ -1,14 +1,16 @@
-from criador.classe import player
-from criador.interface import menu
-from criador.dados import *
-from criador.funcoes import *
+# System test
 
-race_choice_num = menu(races,'Races')
-race_choice = races[race_choice_num-1]
+## Importing modules
+from criador_de_personagem_ded.criador.classe import Player
 
+## Creating Player
+character = Player()
 
-s_race_choice_num = menu(sub_div(race_choice), 'Race traces')
-s_race_choice = sub_div(race_choice)[s_race_choice_num-1]
+## Choosing Attributes
+character.choose_race()
+character.choose_class()
+character.choose_abl()
 
-character =player(race=race_choice, s_race=s_race_choice)
-character.all_atr()
+## Visualisation of abilities and attributes
+character.my_atr()
+character.my_abl()
