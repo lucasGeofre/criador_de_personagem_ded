@@ -34,6 +34,20 @@ class Player:
                          {'Dexterity': self.dexterity},
                          {'Charisma': self.charisma}]
 
+    def update_prm_list(self):
+        self.list_prm = [{"class": self.clss},
+                         {"race": self.race},
+                         {"sub_clss": self.clss_path},
+                         {"sub_race": self.s_race}]
+
+    def update_abl_list(self):
+        self.list_abl = [{'Strength': self.strength},
+                         {'Intelligence': self.intelligence},
+                         {'Constitution': self.constituition},
+                         {'Wisdom': self.wisdom},
+                         {'Dexterity': self.dexterity},
+                         {'Charisma': self.charisma}]
+
     # Print Attributes
     def my_atr(self):
         print("\n", "-" * 42)
@@ -99,12 +113,7 @@ class Player:
                 abl.pop(choice - 1)
 
         # Update list of abilities
-        self.list_abl = [{'Strength': self.strength},
-                         {'Intelligence': self.intelligence},
-                         {'Constitution': self.constituition},
-                         {'Wisdom': self.wisdom},
-                         {'Dexterity': self.dexterity},
-                         {'Charisma': self.charisma}]
+        self.update_abl_list()
 
     def choose_race(self):
 
@@ -115,11 +124,7 @@ class Player:
         self.s_race = menu_choice(s_races.get(self.race), 'Race traces')
 
         # Updating list of attributes
-        # icaro q porra é essa?
-        self.list_prm = [{"class": self.clss},
-                         {"race": self.race},
-                         {"sub_clss": self.clss_path},
-                         {"sub_race": self.s_race}]
+        self.update_prm_list()
 
     def choose_class(self):
 
@@ -128,27 +133,18 @@ class Player:
         self.clss = classes[clss_choice_num - 1]
 
         # Updating list of attributes
-        self.list_prm = [{"class": self.clss},
-                         {"race": self.race},
-                         {"sub_clss": self.clss_path},
-                         {"sub_race": self.s_race}]
+        self.update_prm_list()
 
     def choose_random_class(self):
         self.clss = classes[random.randint(0, len(classes) - 1)]
 
-        self.list_prm = [{"class": self.clss},
-                         {"race": self.race},
-                         {"sub_clss": self.clss_path},
-                         {"sub_race": self.s_race}]
+        self.update_prm_list()
 
     def choose_random_race(self):
         self.race = races[random.randint(0, len(races) - 1)]
         self.s_race = sub_div(self.race)[random.randint(0, len(sub_div(self.race)) - 1)]
 
-        self.list_prm = [{"class": self.clss},
-                         {"race": self.race},
-                         {"sub_clss": self.clss_path},
-                         {"sub_race": self.s_race}]
+        self.update_prm_list()
 
     def random_abl(self):
         fix_list = [15, 14, 13, 12, 10, 8]
@@ -160,12 +156,7 @@ class Player:
         self.wisdom = fix_list[4]
         self.constituition = fix_list[5]
 
-        self.list_abl = [{'Strength': self.strength},
-                         {'Intelligence': self.intelligence},
-                         {'Constitution': self.constituition},
-                         {'Wisdom': self.wisdom},
-                         {'Dexterity': self.dexterity},
-                         {'Charisma': self.charisma}]
+        self.update_abl_list()
 
     def create_random_player(self):
         self.choose_random_race()
