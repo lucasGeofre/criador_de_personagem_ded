@@ -10,7 +10,7 @@ races = ['dwarf', 'elf', 'halfling', 'half_elf', 'human', 'dragonborn', 'half_or
 
 
 ## Sub-races
-s_races: List[Dict[str, List[str]]] = [{'dwarf': ['mountain dwarf', 'hill dwarf']},
+s_races = [{'dwarf': ['mountain dwarf', 'hill dwarf']},
            {'elf': ['dark elf', 'high elf', 'wood elf']},
            {'halfling': ['lightfoot halfling', 'stout halfling']},
            {'half_elf': ['half_elf']},

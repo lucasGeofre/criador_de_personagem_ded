@@ -6,11 +6,8 @@ from criador.funcoes import *
 x = Player()
 
 x.create_random_player()
-
-
-
-
-
+x.my_atr()
+x.my_abl()
 
 
 
